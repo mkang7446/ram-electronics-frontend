@@ -1,4 +1,6 @@
 .nav {
+  height: 70px;
+
   grid-row: 1 / span 1;
   grid-column: 1 / span 3;
   display: flex;
