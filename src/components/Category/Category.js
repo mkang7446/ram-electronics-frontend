@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import items from "../Details/items.json";
 
+import "./Category.css";
+
 function Category(props) {
   const { category } = useParams();
   const [allItems, setAllItems] = useState([]);
@@ -24,7 +26,7 @@ function Category(props) {
   return (
     <main className="main-item-card-container">
       {specificItems.map((item) => (
-        <Link to={`/${category}/${item["id"]}`} key={item["id"]}>
+        <Link to={`/${category}/${item["_id"]}`} key={item["_id"]}>
           <div className="card">
             <div className="card-image">
               <img src={item.image} alt={item.name} />
