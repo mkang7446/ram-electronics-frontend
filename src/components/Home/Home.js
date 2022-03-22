@@ -6,7 +6,9 @@ import "./Home.css";
 function Home(props) {
   return (
     <main className="home-main">
-      <section className="seasonal-ad">Seasonal Header Here</section>
+      <section className="seasonal-ad">
+        <Link to={`/consoles`}>Seasonal Header</Link>
+      </section>
       <div className="home-categories-container">
         <div className="category-container" id="consoles-container">
           <Link to={`/consoles`}>Consoles</Link>
