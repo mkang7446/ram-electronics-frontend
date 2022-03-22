@@ -1,0 +1,19 @@
+.home-main {
+  display: grid;
+
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 4fr 4fr;
+}
+
+.seasonal-ad {
+  grid-row: 2 / span 1;
+  grid-column: 2 / span 1;
+}
+
+.home-categories-container {
+  grid-row: 3 / span 1;
+  grid-column: 2 / span 1;
+
+  display: flex;
+  flex-direction: row;
+}
