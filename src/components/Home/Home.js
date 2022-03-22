@@ -1,4 +1,7 @@
 import React from "react";
+// import { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Home.css";
 
 function Home(props) {
   return (
@@ -6,13 +9,28 @@ function Home(props) {
       <section className="seasonal-ad">Get in the Game</section>
       <div className="home-categories-container">
         <div className="category-container" id="consoles-container">
-          Consoles
+          <Link to={`/consoles`}>Consoles</Link>
+        </div>
+        <div className="category-container" id="tvs-container">
+          <Link to={`/tvs`}>TVs</Link>
+        </div>
+        <div className="category-container" id="tablets-container">
+          <Link to={`/tablets`}>Tablets</Link>
+        </div>
+        <div className="category-container" id="smart-watches-container">
+          <Link to={`/smart-watches`}>Smart Watches</Link>
+        </div>
+        <div className="category-container" id="laptops-container">
+          <Link to={`/laptops`}>Laptops</Link>
+        </div>
+        <div className="category-container" id="desktops-container">
+          <Link to={`/desktops`}>Desktops</Link>
         </div>
         <div className="category-container" id="parts-container">
-          PC Parts
+          <Link to={`/parts`}>PC Parts</Link>
         </div>
         <div className="category-container" id="music-container">
-          Music
+          <Link to={`/music`}>Music</Link>
         </div>
       </div>
     </main>
