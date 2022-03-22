@@ -1,11 +1,40 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import items from "../Details/items.json";
 
 function Category(props) {
   const { category } = useParams();
+  const [allItems, setAllItems] = useState([]);
+  const [specificItems, setSpecificItems] = useState([]);
+
+  // const url = "../Details/items.json";
+
+  useEffect(() => {
+    setAllItems(items);
+    const specificItemList = [];
+    items.map((item) => {
+      if (item.category === category) {
+        specificItemList.push(item);
+      }
+    });
+    setSpecificItems(specificItemList);
+  }, []);
+
   return (
     <main className="main-item-card-container">
-      <p>Hello from {`${category}`} Page</p>
+      {specificItems.map((item) => (
+        <Link to={`/${category}/${item["id"]}`} key={item["id"]}>
+          <div className="card">
+            <div className="card-image">
+              <img src={item.image} alt={item.name} />
+            </div>
+            <div className="card-title">
+              <h3>{item.name}</h3>
+            </div>
+          </div>
+        </Link>
+      ))}
     </main>
   );
 }
