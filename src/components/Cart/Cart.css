@@ -22,6 +22,11 @@
   grid-row: 1 / span 2;
 }
 
+.cart-item-image img {
+  height: 150px;
+  width: 150px;
+}
+
 .item-price-in-cart {
   border: 1px solid black;
 
