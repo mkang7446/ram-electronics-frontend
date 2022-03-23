@@ -13,6 +13,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
 }
 
 #button-and-name {
@@ -20,6 +21,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  gap: 10px;
 }
 
 #home-and-cart-links {
@@ -27,6 +29,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+  gap: 10px;
 }
 
 .test-link {

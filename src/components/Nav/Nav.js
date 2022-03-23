@@ -14,7 +14,9 @@ const Nav = () => {
           <Link to="/" className="links">
             Home
           </Link>
-          <p className="test-link">Cart</p>
+          <Link to="/cart" className="links">
+            🛒
+          </Link>
         </span>
       </nav>
     </div>
