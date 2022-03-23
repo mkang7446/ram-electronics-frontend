@@ -1,13 +1,17 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import items from "../Details/items.json";
+import axios from "axios";
 
 import "./Details.css";
 
 function Details(props) {
   const { category, id } = useParams();
   const [specificItem, setSpecificItem] = useState({});
+
+  const cart = {
+    item: [],
+  };
 
   const url = "https://thawing-mountain-85716.herokuapp.com/api/items";
 
@@ -26,6 +30,33 @@ function Details(props) {
       .catch((err) => console.log("oops error"));
   }, []);
 
+  //add item to cart API
+  const handleClick = (event) => {
+    event.preventDefault();
+    console.log("you clicked");
+
+    cart.item.push(specificItem);
+
+    // axios
+    //   .post("http://thawing-mountain-85716.herokuapp.com/api/carts/", cart)
+    //   .then((res) => {
+    //     console.log(res);
+    //   });
+
+    fetch("https://thawing-mountain-85716.herokuapp.com/api/carts/", {
+      // if the method isn't get it must be specified
+      method: "POST",
+      // turn the JS object into JSON
+      body: JSON.stringify(cart),
+      // let the backend know what type of data it's about to receive
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then((res) => {
+      console.log(res);
+    });
+  };
+
   return (
     <div className="item-details-container">
       {console.log(specificItem)}
@@ -41,7 +72,9 @@ function Details(props) {
       </div>
       <div className="add-to-cart-box">
         {" "}
-        <button className="add-item-to-cart-button">Add to Cart</button>
+        <button className="add-item-to-cart-button" onClick={handleClick}>
+          Add to Cart
+        </button>
       </div>
       <div className="item-reviews-box">Reviews Here</div>
     </div>
