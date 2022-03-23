@@ -29,17 +29,21 @@ function Details(props) {
   return (
     <div className="item-details-container">
       {console.log(specificItem)}
-      <div className="item-details-name">
-        <h2>{specificItem.name}</h2>
-      </div>
-      <div className="item-details-image">
+      <div className="item-image-box">
         <img src={specificItem.image} alt={specificItem.name} />
       </div>
-      <div className="item-details-description-and-price">
-        <p className="item-details-description">{specificItem.description}</p>
-        <p className="item-details-price">{specificItem.price}</p>
+      <div className="item-details-box">
+        <h2>{specificItem.name}</h2>
+        <div className="item-details-description-and-price">
+          <p className="item-details-price">{specificItem.price}</p>
+          <p className="item-details-description">{specificItem.description}</p>
+        </div>
       </div>
-      <button className="add-item-to-cart-button">Add to Cart</button>
+      <div className="add-to-cart-box">
+        {" "}
+        <button className="add-item-to-cart-button">Add to Cart</button>
+      </div>
+      <div className="item-reviews-box">Reviews Here</div>
     </div>
   );
 }
