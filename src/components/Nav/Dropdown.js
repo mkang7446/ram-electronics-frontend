@@ -1,11 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import OutsideClickHandler from "react-outside-click-handler";
 
-import "./Nav.css";
-
-const Nav = () => {
+function Dropdown(props) {
   const [displayNav, setDisplayNav] = useState(false);
 
   const expandNav = (event) => {
@@ -15,26 +12,7 @@ const Nav = () => {
   };
 
   return (
-    // <OutsideClickHandler
-    //   onOutsideClick={() => {
-    //     setDisplayNav(false);
-    //   }}
-    // >
-    <div className="nav">
-      <nav id="nav-bar">
-        <span id="button-and-name">
-          <button onClick={expandNav}>≡</button>
-          <h1>RAM electronics 📀🐏📀</h1>
-        </span>
-        <span id="home-and-cart-links">
-          <Link to="/" className="links">
-            Home
-          </Link>
-          <Link to="/cart" className="links">
-            🛒
-          </Link>
-        </span>
-      </nav>
+    <div>
       {displayNav ? (
         <nav className="collapsible-nav">
           <ul className="category-links">
@@ -59,8 +37,7 @@ const Nav = () => {
         </nav>
       ) : null}
     </div>
-    // </OutsideClickHandler>
   );
-};
+}
 
-export default Nav;
+export default Dropdown;

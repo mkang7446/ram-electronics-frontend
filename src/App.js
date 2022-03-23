@@ -4,6 +4,7 @@ import Nav from "./components/Nav/Nav";
 import Home from "./components/Home/Home";
 import Category from "./components/Category/Category";
 import Details from "./components/Details/Details";
+import Cart from "./components/Cart/Cart";
 
 import "./App.css";
 
@@ -13,6 +14,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/:category" element={<Category />} />
         <Route path="/:category/:id" element={<Details />} />
       </Routes>

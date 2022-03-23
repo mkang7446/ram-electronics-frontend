@@ -13,6 +13,28 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
+}
+
+.collapsible-nav {
+  display: block;
+
+  border: 1px solid black;
+  width: 40vw;
+  height: 50vw;
+
+  transition: height 0.2s ease-in-out;
+
+  z-index: 1000;
+}
+
+.collapsible-nav ul {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  list-style-type: none;
 }
 
 #button-and-name {
@@ -20,6 +42,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  gap: 10px;
 }
 
 #home-and-cart-links {
@@ -27,6 +50,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+  gap: 10px;
 }
 
 .test-link {
