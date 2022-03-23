@@ -10,17 +10,24 @@ function Category(props) {
   const [allItems, setAllItems] = useState([]);
   const [specificItems, setSpecificItems] = useState([]);
 
-  // const url = "../Details/items.json";
+  const url = "https://thawing-mountain-85716.herokuapp.com/api/items";
 
   useEffect(() => {
-    setAllItems(items);
     const specificItemList = [];
-    items.map((item) => {
-      if (item.category === category) {
-        specificItemList.push(item);
-      }
-    });
-    setSpecificItems(specificItemList);
+
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        data.map((item) => {
+          if (item.category === category) {
+            specificItemList.push(item);
+          }
+        });
+
+        setAllItems(data);
+        setSpecificItems(specificItemList);
+      })
+      .catch((err) => console.log("oops error"));
   }, []);
 
   return (
