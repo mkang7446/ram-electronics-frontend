@@ -3,18 +3,9 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function Details(props) {
-  const { itemCategory, itemID } = useParams();
+  const { category, id } = useParams();
 
-  useEffect(() => {
-    const paramInfo = [];
-
-    paramInfo.push(itemCategory);
-    paramInfo.push(itemID);
-
-    console.log(paramInfo);
-  }, []);
-
-  return <div>This is the details page for item: {`${itemID}`}</div>;
+  return <div>This is the details page for item: {`${id}`}</div>;
 }
 
 export default Details;
