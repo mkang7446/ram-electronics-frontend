@@ -19,8 +19,6 @@ function Cart(props) {
         if (data.length > 0) {
           setCartEmpty(false);
         }
-
-        console.log(data);
       })
       .catch((err) => console.log("oops error"));
   }, []);
@@ -29,11 +27,14 @@ function Cart(props) {
     event.preventDefault();
     console.log("you clicked");
 
-    axios
-      .delete("http://thawing-mountain-85716.herokuapp.com/api/carts/", cart)
-      .then((res) => {
-        console.log(res);
-      });
+    console.log(event.currentTarget.id);
+    let itemId;
+
+    // axios
+    //   .delete(`http://thawing-mountain-85716.herokuapp.com/api/carts/`, cart)
+    //   .then((res) => {
+    //     console.log(res);
+    //   });
   };
 
   return (
@@ -61,7 +62,9 @@ function Cart(props) {
             <div className="item-price-in-cart">{cart[0].item[0].price}</div>
             <div className="item-cart-quantity">quantity dropdown here</div>
             <div className="remove-from-cart">
-              <button onClick="handleRemove">Remove Item</button>
+              <button onClick={handleRemove} id={cart[0].item[0]["_id"]}>
+                Remove Item
+              </button>
             </div>{" "}
           </>
         ) : (

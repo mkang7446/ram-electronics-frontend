@@ -7,7 +7,7 @@ function Home(props) {
   return (
     <main className="home-main">
       <section className="seasonal-ad">
-        <Link to={`/consoles`}>Seasonal Header</Link>
+        <Link to={`/game`}>Seasonal Header</Link>
       </section>
       <div className="home-categories-container">
         <div className="category-container" id="consoles-container">
