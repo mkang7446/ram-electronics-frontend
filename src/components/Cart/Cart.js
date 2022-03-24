@@ -1,12 +1,14 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 import './Cart.css';
 
 function Cart(props) {
   const [cart, setCart] = useState([]);
   const [cartEmpty, setCartEmpty] = useState(true);
+  const navigate = useNavigate();
 
   const url = 'https://thawing-mountain-85716.herokuapp.com/api/carts';
 
@@ -23,19 +25,42 @@ function Cart(props) {
       .catch((err) => console.log('oops error'));
   }, []);
 
-  const handleRemove = (event) => {
-    event.preventDefault();
-    console.log('you clicked');
+  // const handleRemove = (event) => {
+  //   event.preventDefault();
+  //   console.log('you clicked');
 
-    console.log(event.currentTarget.id);
-    let itemId;
+  //   console.log(event.currentTarget.id);
+  //   let itemId;
 
-    // axios
-    //   .delete(`http://thawing-mountain-85716.herokuapp.com/api/carts/`, cart)
-    //   .then((res) => {
-    //     console.log(res);
-    //   });
+  //   // axios
+  //   //   .delete(`http://thawing-mountain-85716.herokuapp.com/api/carts/`, cart)
+  //   //   .then((res) => {
+  //   //     console.log(res);
+  //   //   });
+  // };
+
+  const handleRemove = async (event) => {
+    // Write your DELETE fetch() or axios() request here
+    const confirm = window.confirm('Are you sure you want to delete?');
+    if (confirm) {
+      try {
+        const response = await axios.delete(`${url}/${event.currentTarget.id}`);
+        // if operation was successful navigate back to home
+        if (response.status === 200) {
+          console.log('status => 200');
+        }
+      } catch (error) {
+        // more error handling
+        console.log(error);
+      }
+      window.location.reload(false);
+      // navigate('/cart');
+    }
   };
+
+  // const handleRemove = (event) => {
+  //   event.currentTarget.id
+  // };
 
   return (
     <div className='cart'>
@@ -53,7 +78,9 @@ function Cart(props) {
               </div>
               <div className='item-cart-quantity'>quantity dropdown here</div>
               <div className='remove-from-cart'>
-                <button onClick={handleRemove}>Remove Item</button>
+                <button onClick={handleRemove} id={itemToBuy['_id']}>
+                  Remove Item
+                </button>
               </div>
             </div>
           );
