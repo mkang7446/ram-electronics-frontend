@@ -40,20 +40,23 @@ function Cart(props) {
   return (
     <div className="cart">
       <div className="cart-grid">
-        {/* {cart.map((itemToBuy) => {
+        {cart.map((itemToBuy) => {
+          console.log(itemToBuy.item[0].name);
           <>
             <div className="cart-item-image">
-              <img src={itemToBuy.item[0].image} alt="" />
+              <img src={itemToBuy.image} alt="" />
             </div>
-            <div className="item-price-in-cart">{itemToBuy.item[0].price}</div>
+            <div className="item-price-in-cart">
+              {itemToBuy.item[0]["price"]}
+            </div>
             <div className="item-cart-quantity">quantity dropdown here</div>
             <div className="remove-from-cart">
               <button onClick="handleRemove">Remove Item</button>
             </div>
           </>;
-        })} */}
+        })}
         {console.log(cart)}
-        {!cartEmpty ? (
+        {/* {!cartEmpty ? (
           <>
             {" "}
             <div className="cart-item-image">
@@ -69,7 +72,7 @@ function Cart(props) {
           </>
         ) : (
           <p>Your Cart Is Empty!</p>
-        )}
+        )} */}
       </div>
 
       <footer className="cart-total">
