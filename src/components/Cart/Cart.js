@@ -14,7 +14,7 @@ function Cart(props) {
   const navigate = useNavigate();
 
   const url =
-    "http://thawing-mountain-85716.herokuapp.com/api/carts/623cfceabf21be8483a4b201";
+    "https://thawing-mountain-85716.herokuapp.com/api/carts/623cfceabf21be8483a4b201";
 
   useEffect(() => {
     fetch(url)
