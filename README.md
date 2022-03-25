@@ -12,6 +12,12 @@ In this repository lies the frontend: components for a homepage, navigation bar,
 
 ## Screenshots
 
+Desktop view
+<img width="1307" alt="Screen Shot 2022-03-25 at 10 58 03 AM" src="https://user-images.githubusercontent.com/97859358/160176496-f97febf4-38f1-4388-9856-5e40c176f381.png">
+
+Mobile view
+![Screen Shot 2022-03-25 at 10 59 20 AM](https://user-images.githubusercontent.com/97859358/160176637-f5986f1c-1cce-42c1-9a53-54c3a5b3203e.png)
+
 
 
 ## Tech Used
@@ -25,6 +31,8 @@ HTML
 netlify
 Visual Studio Code
 Font Awesome
+Adobe Photoshop
+Adobe Illustrator
 
 ## Link to API
 
@@ -97,16 +105,17 @@ Create a review system.
 
 ## Sources
 
-Work done by Annie Courney, Myungsoo "Mason" Kang, and Jake Steele.
+Coding done by Annie Courney, Myungsoo "Mason" Kang, and Jake Steele.
 
 Esin Saribudak helped to get individual items into a single cart without replicates.
 
 A special thank you to stack overflow and everybody who seriously answers questions on the internet.
 
+RAM logo is original drawing by Jake Steele.
 
 ## Original wireframes
 
-![](https://files.slack.com/files-pri/T0351JZQ0-F0383CETGN8/project_2_-_jam_-_wireframes.png)
+![](https://files.slack.com/files-pri/T0351JZQ0-F038R8U6F5Z/project2_-_wireframes.png)
 
 
 
