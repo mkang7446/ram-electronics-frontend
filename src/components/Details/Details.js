@@ -9,7 +9,7 @@ function Details(props) {
   const { category, id } = useParams();
   const [specificItem, setSpecificItem] = useState({});
 
-  const url = "http://thawing-mountain-85716.herokuapp.com/api/items";
+  const url = "https://thawing-mountain-85716.herokuapp.com/api/items";
 
   useEffect(() => {
     fetch(url)
@@ -33,7 +33,7 @@ function Details(props) {
     // do not need a req body
     console.log(specificItem._id);
     fetch(
-      `http://thawing-mountain-85716.herokuapp.com/api/carts/623cfceabf21be8483a4b201/${specificItem._id}`,
+      `https://thawing-mountain-85716.herokuapp.com/api/carts/623cfceabf21be8483a4b201/${specificItem._id}`,
       {
         method: "PUT",
         headers: {
@@ -55,12 +55,9 @@ function Details(props) {
         <img src={specificItem.image} alt={specificItem.name} />
       </div>
       <div className="item-details-box">
-        <div className="item-name-and-price">
-          <h4>{specificItem.name}  {specificItem.price}</h4>
-          {/* <h3 className="item-details-price">{specificItem.price}</h3> */}
-        </div> 
+        <h2>{specificItem.name}</h2>
         <div className="item-details-description-and-price">
-          
+          <p className="item-details-price">{specificItem.price}</p>
           <p className="item-details-description">{specificItem.description}</p>
         </div>
       </div>
