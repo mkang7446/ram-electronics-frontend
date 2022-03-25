@@ -9,6 +9,8 @@
   flex-wrap: wrap;
 
   gap: 14px;
+  /* text-decoration: none;
+  color: red; */
 }
 
 .home-categories-container {
@@ -33,6 +35,7 @@
   justify-content: center;
 
   border: 1px solid black;
+  /* text-decoration: none; */
 }
 
 .category-container {
@@ -45,4 +48,16 @@
   justify-content: center;
 
   border: 1px solid black;
+}
+
+.category-container img {
+  width: 125px;
+}
+
+.seasonal-ad img {
+  width: 275px;
+}
+
+.category-container {
+  text-align: center;
 }

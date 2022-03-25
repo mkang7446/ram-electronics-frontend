@@ -64,9 +64,12 @@ function Details(props) {
         <img src={specificItem.image} alt={specificItem.name} />
       </div>
       <div className="item-details-box">
-        <h2>{specificItem.name}</h2>
+        <div className="item-name-and-price">
+          <h4>{specificItem.name}  {specificItem.price}</h4>
+          {/* <h3 className="item-details-price">{specificItem.price}</h3> */}
+        </div> 
         <div className="item-details-description-and-price">
-          <p className="item-details-price">{specificItem.price}</p>
+          
           <p className="item-details-description">{specificItem.description}</p>
         </div>
       </div>
