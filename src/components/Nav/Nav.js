@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import OutsideClickHandler from 'react-outside-click-handler';
-import Modal from './Modal';
+import React from "react";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import OutsideClickHandler from "react-outside-click-handler";
+import Modal from "./Modal";
 
-import './Nav.css';
+import "./Nav.css";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,56 +16,56 @@ const Nav = () => {
   };
 
   const OTHER_CONTENT_STYLES = {
-    position: 'relative',
+    position: "relative",
     zIndex: 2,
-    backgroundColor: 'red',
-    padding: '10px',
+    backgroundColor: "red",
+    padding: "10px",
   };
 
   return (
-    <div className='nav'>
-      <nav id='nav-bar'>
-        <div id='nav-first-line'>
+    <div className="nav">
+      <nav id="nav-bar">
+        <div id="nav-first-line">
           <div style={BUTTON_WRAPPER_STYLES}>
-            <button id='modal-open-button' onClick={() => setIsOpen(true)}>
-              <i id='sidebar__activator' class='fas fa-bars'></i>
+            <button id="modal-open-button" onClick={() => setIsOpen(true)}>
+              <i id="sidebar__activator" class="fas fa-bars"></i>
             </button>
             <Modal open={isOpen} onClose={() => setIsOpen(false)}></Modal>
           </div>
 
-          <Link to='/cart' className='links-cart'>
-            <i class='fa-solid fa-cart-shopping'></i>
+          <Link to="/cart" className="links-cart">
+            <i class="fa-solid fa-cart-shopping"></i>
           </Link>
         </div>
-        <div id='logo-name'>
-          <Link id='logo-name-link' to='/'>
-            <h1 id='logo-name-h1'>RAM electronics 📀🐏📀</h1>
+        <div id="logo-name">
+          <Link id="logo-name-link" to="/">
+            <h1 id="logo-name-h1">RAM electronics 📀🐏📀</h1>
           </Link>
         </div>
 
-        <div className='nav-categories'>
-          <div id='nav-appliance'>
-            <Link className='nav-category-container' to={`/Appliance`}>
+        <div className="nav-categories">
+          <div id="nav-appliance">
+            <Link className="nav-category-container" to={`/Appliance`}>
               Appliances
             </Link>
           </div>
-          <div id='nav-tv'>
-            <Link className='nav-category-container' to={`/tv`}>
+          <div id="nav-tv">
+            <Link className="nav-category-container" to={`/tv`}>
               TVs
             </Link>
           </div>
-          <div id='nav-computers'>
-            <Link className='nav-category-container' to={`/computers`}>
+          <div id="nav-computers">
+            <Link className="nav-category-container" to={`/computers`}>
               Computers and Tablets
             </Link>
           </div>
-          <div id='nav-smarts'>
-            <Link className='nav-category-container' to={`/smart`}>
+          <div id="nav-smarts">
+            <Link className="nav-category-container" to={`/smart`}>
               Smart Phones and Wearables
             </Link>
           </div>
-          <div id='nav-gaming'>
-            <Link className='nav-category-container' to={`/game`}>
+          <div id="nav-gaming">
+            <Link className="nav-category-container" to={`/game`}>
               Gaming
             </Link>
           </div>

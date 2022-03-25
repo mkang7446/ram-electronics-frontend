@@ -8,6 +8,8 @@ function Home(props) {
     <main className="home-main">
      <section className="seasonal-ad">
         <Link to={`/game`}>Fun for the whole family!</Link>
+        {/* <img src="/RAM_fromLEFT.svg" alt="" /> */}
+{/* ABOVE IS EXAMPLE OF HOW TO IMPORT THE RAM LOGO*/}
         <img src="https://images.ctfassets.net/p0qf7j048i0q/3Mht6zhJpCu12MDLivCVyv/85e9cca8656dadad5fef365e424ff531/G1015133478.jpg" alt="" />
       </section>
       <div className="home-categories-container">

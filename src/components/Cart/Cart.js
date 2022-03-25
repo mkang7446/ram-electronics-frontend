@@ -14,7 +14,7 @@ function Cart(props) {
   const navigate = useNavigate();
 
   const url =
-    "http://thawing-mountain-85716.herokuapp.com/api/carts/623cfceabf21be8483a4b201";
+    "https://thawing-mountain-85716.herokuapp.com/api/carts/623cfceabf21be8483a4b201";
 
   useEffect(() => {
     fetch(url)
@@ -31,23 +31,11 @@ function Cart(props) {
       .catch((err) => console.log("oops error"));
   }, []);
 
-  // const handleRemove = (event) => {
-  //   event.preventDefault();
-  //   console.log('you clicked');
-
-  //   console.log(event.currentTarget.id);
-  //   let itemId;
-
-  //   // axios
-  //   //   .delete(`http://thawing-mountain-85716.herokuapp.com/api/carts/`, cart)
-  //   //   .then((res) => {
-  //   //     console.log(res);
-  //   //   });
-  // };
-
   const handleRemove = async (event) => {
     // Write your DELETE fetch() or axios() request here
-    const confirm = window.confirm("Are you sure you want to delete?");
+    const confirm = window.confirm(
+      "Are you sure you want to remove this item from your cart?"
+    );
     if (confirm) {
       try {
         const response = await axios.delete(`${url}/${event.currentTarget.id}`);
@@ -92,12 +80,16 @@ function Cart(props) {
                 <div className="cart-item-image">
                   <img src={itemToBuy.image} alt="" />
                 </div>
-                <div className="item-price-in-cart">{itemToBuy.price}</div>
-                <div className="item-cart-quantity">Limit 1 per customer</div>
-                <div className="remove-from-cart">
-                  <button onClick={handleRemove} id={itemToBuy["_id"]}>
-                    Remove Item
-                  </button>
+                <div className="cart-item-details">
+                  <div className="item-price-in-cart">
+                    Item Price: {itemToBuy.price}
+                  </div>
+                  <div className="item-cart-quantity">Limit 1 per customer</div>
+                  <div className="remove-from-cart">
+                    <button onClick={handleRemove} id={itemToBuy["_id"]}>
+                      Remove Item
+                    </button>
+                  </div>
                 </div>
               </div>
             );
@@ -109,7 +101,7 @@ function Cart(props) {
 
       <footer className="cart-total">
         <p>
-          Total: <span>{cartTotal}</span>
+          Total: $<span>{cartTotal}</span>
         </p>
       </footer>
     </div>
