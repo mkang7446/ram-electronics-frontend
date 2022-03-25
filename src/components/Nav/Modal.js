@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 
 const MODAL_STYLES = {
+  width: '220px',
+  height: '180px',
   position: 'fixed',
   backgroundColor: '#FFF',
   zIndex: 1000,

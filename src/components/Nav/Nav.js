@@ -28,13 +28,13 @@ const Nav = () => {
         <div id='nav-first-line'>
           <div style={BUTTON_WRAPPER_STYLES}>
             <button id='modal-open-button' onClick={() => setIsOpen(true)}>
-              <i id='sidebar__activator' class='fas fa-bars'></i>
+              <i id='sidebar__activator' className='fas fa-bars'></i>
             </button>
             <Modal open={isOpen} onClose={() => setIsOpen(false)}></Modal>
           </div>
 
           <Link to='/cart' className='links-cart'>
-            <i class='fa-solid fa-cart-shopping'></i>
+            <i className='fa-solid fa-cart-shopping'></i>
           </Link>
         </div>
         <div id='logo-name'>
