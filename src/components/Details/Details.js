@@ -9,10 +9,6 @@ function Details(props) {
   const { category, id } = useParams();
   const [specificItem, setSpecificItem] = useState({});
 
-  const cart = {
-    item: [],
-  };
-
   const url = "https://thawing-mountain-85716.herokuapp.com/api/items";
 
   useEffect(() => {
@@ -30,36 +26,31 @@ function Details(props) {
       .catch((err) => console.log("oops error"));
   }, []);
 
-  //add item to cart API
   const handleClick = (event) => {
     event.preventDefault();
-    console.log("you clicked");
-
-    cart.item.push(specificItem);
-
-    // axios
-    //   .post("http://thawing-mountain-85716.herokuapp.com/api/carts/", cart)
-    //   .then((res) => {
-    //     console.log(res);
-    //   });
-
-    fetch("https://thawing-mountain-85716.herokuapp.com/api/carts/", {
-      // if the method isn't get it must be specified
-      method: "POST",
-      // turn the JS object into JSON
-      body: JSON.stringify(cart),
-      // let the backend know what type of data it's about to receive
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }).then((res) => {
-      console.log(res);
-    });
+    // update individual item then put to /:cartId/:itemId
+    // http://localhost:4000/api/carts/623cf5523ed7514870b6c633/11
+    // do not need a req body
+    console.log(specificItem._id);
+    fetch(
+      `http://thawing-mountain-85716.herokuapp.com/api/carts/623cfceabf21be8483a4b201/${specificItem._id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+      });
   };
 
   return (
     <div className="item-details-container">
-      {console.log(specificItem)}
       <div className="item-image-box">
         <img src={specificItem.image} alt={specificItem.name} />
       </div>
