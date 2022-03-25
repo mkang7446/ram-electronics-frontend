@@ -9,8 +9,7 @@
   flex-wrap: wrap;
 
   gap: 14px;
-  /* text-decoration: none;
-  color: red; */
+  
 }
 
 .home-categories-container {
@@ -35,7 +34,7 @@
   justify-content: center;
 
   border: 1px solid black;
-  /* text-decoration: none; */
+  
 }
 
 .category-container {
