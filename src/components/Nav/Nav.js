@@ -32,7 +32,6 @@ const Nav = () => {
             </button>
             <Modal open={isOpen} onClose={() => setIsOpen(false)}></Modal>
           </div>
-
           <Link to='/cart' className='links-cart'>
             <i className='fa-solid fa-cart-shopping'></i>
           </Link>
