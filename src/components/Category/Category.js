@@ -37,10 +37,11 @@ function Category(props) {
           <div className="card">
             <div className="card-image">
               <img src={item.image} alt={item.name} />
+              <div className="card-title">
+                <h3>{item.name}</h3>
+              </div>
             </div>
-            <div className="card-title">
-              <h3>{item.name}</h3>
-            </div>
+            
           </div>
         </Link>
       ))}
