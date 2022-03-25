@@ -111,7 +111,7 @@ RAM logo is original drawing by Jake Steele.
 
 ## Original wireframes
 
-![](https://files.slack.com/files-pri/T0351JZQ0-F038R8U6F5Z/project2_-_wireframes.png)
+![(https://files.slack.com/files-pri/T0351JZQ0-F038R8U6F5Z/project2_-_wireframes.png)
 
 
 
