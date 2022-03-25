@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom';
 
+const MODAL_STYLES = {
+  position: 'fixed',
+  backgroundColor: '#FFF',
+  zIndex: 1000,
+};
+
 export default function Modal({ open, children, onClose }) {
   if (!open) return null;
 
   return (
-    <div id='modal'>
+    <div style={MODAL_STYLES} id='modal'>
       <div id='modal-open'>
         <div className='modal-appliance-div'>
           <Link className='modal-appliance' to={`/Appliance`}>
