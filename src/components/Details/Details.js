@@ -9,7 +9,7 @@ function Details(props) {
   const { category, id } = useParams();
   const [specificItem, setSpecificItem] = useState({});
 
-  const url = "https://thawing-mountain-85716.herokuapp.com/api/items";
+  const url = "http://thawing-mountain-85716.herokuapp.com/api/items";
 
   useEffect(() => {
     fetch(url)
