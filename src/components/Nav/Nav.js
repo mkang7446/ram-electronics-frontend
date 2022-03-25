@@ -10,8 +10,8 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const BUTTON_WRAPPER_STYLES = {
-    backgroundColor: "white",
-    position: "absolute",
+    backgroundColor: 'white',
+    position: 'absoulte',
     zIndex: 1,
   };
 
