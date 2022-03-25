@@ -2,40 +2,46 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import OutsideClickHandler from 'react-outside-click-handler';
+import Modal from './Modal';
 
 import './Nav.css';
 
 const Nav = () => {
-  const [displayNav, setDisplayNav] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const expandNav = (event) => {
-    event.preventDefault();
-
-    setDisplayNav(!displayNav);
+  const BUTTON_WRAPPER_STYLES = {
+    position: 'relative',
+    zIndex: 1,
   };
 
-  // if pixel is below 650 ? hide nav bar
+  const OTHER_CONTENT_STYLES = {
+    position: 'relative',
+    zIndex: 2,
+    backgroundColor: 'red',
+    padding: '10px',
+  };
 
   return (
-    // <OutsideClickHandler
-    //   onOutsideClick={() => {
-    //     setDisplayNav(false);
-    //   }}
-    // >
     <div className='nav'>
       <nav id='nav-bar'>
-        <Link to='/cart' className='links-cart'>
-          Cart
-        </Link>
-        {/* <button onClick={expandNav}>≡</button> */}
+        <div id='nav-first-line'>
+          <div style={BUTTON_WRAPPER_STYLES}>
+            <button id='modal-open-button' onClick={() => setIsOpen(true)}>
+              <i id='sidebar__activator' class='fas fa-bars'></i>
+            </button>
+            <Modal open={isOpen} onClose={() => setIsOpen(false)}></Modal>
+          </div>
+
+          <Link to='/cart' className='links-cart'>
+            <i class='fa-solid fa-cart-shopping'></i>
+          </Link>
+        </div>
         <div id='logo-name'>
           <Link id='logo-name-link' to='/'>
-            <div id='hamburger-bar'>
-              <i id='sidebar__activator' class='fas fa-bars'></i>
-            </div>
             <h1 id='logo-name-h1'>RAM electronics 📀🐏📀</h1>
           </Link>
         </div>
+
         <div className='nav-categories'>
           <div id='nav-appliance'>
             <Link className='nav-category-container' to={`/Appliance`}>
@@ -64,28 +70,6 @@ const Nav = () => {
           </div>
         </div>
       </nav>
-
-      {/* <nav className='collapsible-nav'>
-        <ul className='category-links'>
-          <li>
-            <Link to={`/Appliance`}>Appliances</Link>
-          </li>
-          <li>
-            {' '}
-            <Link to={`/tv`}>TVs</Link>
-          </li>
-          <li>
-            <Link to={`/computers`}>Computers and Tablets</Link>
-          </li>
-          <li>
-            <Link to={`/smart`}>Smart Phones and Wearables</Link>
-          </li>
-          <li>
-            {' '}
-            <Link to={`/game`}>Gaming</Link>
-          </li>
-        </ul>
-      </nav> */}
     </div>
   );
 };
