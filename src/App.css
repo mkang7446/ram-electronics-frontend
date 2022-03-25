@@ -1,4 +1,4 @@
-@import url('https://css.gg/shopping-cart.css');
+@import url("https://css.gg/shopping-cart.css");
 * {
   box-sizing: border-box;
   font-family: Verdana, Tahoma, sans-serif;
@@ -226,4 +226,9 @@
 
 .collapsible-nav {
   display: none;
+}
+
+.links-cart {
+  margin-top: 27px;
+  z-index: 1000;
 }
