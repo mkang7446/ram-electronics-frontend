@@ -1,0 +1,19 @@
+As a team we used Trello and met each morning about which steps to prioritize to reach MVP.
+
+Link to Trello board: https://trello.com/b/UDzqdhv3/project-2
+
+First, we focused on making the items and carts APIs on the back end and making interactions with the API on the front end.
+
+We added minimal CSS while scaffolding out the front end components.
+
+When the front and back end were nearing MVP, we started looking for bugs to fix before moving on to polishing up the CSS.
+
+Finally, we split up the CSS by component and added our styles and media queries. 
+
+Jake Steele drew the RAM logo and added that to the final product.
+
+Our stretch goals are to:
+    - Modify the way the API works with the item quantity
+    - Have authenticated users
+    - Be able to make reviews
+

@@ -1,0 +1,9 @@
+When the app loads, App.js is rendered which displays Home and Nav components.
+
+The Nav component is rendered on every and contains links to the Category and Cart components.
+
+The Home Component Contains links to the Category and Cart components.
+
+The Category component contains links to the Details page which renders information for each item.
+
+The Cart component does not contain links to other pages.
