@@ -28,7 +28,7 @@ function Category(props) {
         setSpecificItems(specificItemList);
       })
       .catch((err) => console.log("oops error"));
-  }, []);
+  }, [category]);
 
   return (
     <main className="main-item-card-container">
@@ -41,7 +41,6 @@ function Category(props) {
                 <h3>{item.name}</h3>
               </div>
             </div>
-            
           </div>
         </Link>
       ))}
