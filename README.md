@@ -31,7 +31,7 @@ Font Awesome
 Adobe Photoshop
 Adobe Illustrator
 
-## Link to API
+## Links to API
 
 http://thawing-mountain-85716.herokuapp.com/api/carts/
 
