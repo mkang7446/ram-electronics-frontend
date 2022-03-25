@@ -8,6 +8,9 @@ import "./Cart.css";
 function Cart(props) {
   const [cart, setCart] = useState([]);
   const [cartEmpty, setCartEmpty] = useState(true);
+  const [cartPrices, setCartPrices] = useState([]);
+  const [cartTotal, setCartTotal] = useState(0);
+
   const navigate = useNavigate();
 
   const url =
@@ -65,6 +68,17 @@ function Cart(props) {
   //   event.currentTarget.id
   // };
 
+  useEffect(() => {
+    let totalSum = 0;
+    cart.map((itemInCart) => {
+      console.log("you have an item in your cart");
+      console.log(itemInCart.price.split("$")[1]);
+      let itemPrice = parseInt(itemInCart.price.split("$")[1]);
+      totalSum += itemPrice;
+    });
+    setCartTotal(totalSum);
+  }, [cart]);
+
   return (
     <div className="cart">
       <div className="cart-grid">
@@ -72,6 +86,7 @@ function Cart(props) {
         {!cartEmpty ? (
           cart.map((itemToBuy, idx) => {
             console.log(itemToBuy);
+
             return (
               <div className="cart-mapping" key={idx}>
                 <div className="cart-item-image">
@@ -94,7 +109,7 @@ function Cart(props) {
 
       <footer className="cart-total">
         <p>
-          Total: <span>price sum here</span>
+          Total: <span>{cartTotal}</span>
         </p>
       </footer>
     </div>
