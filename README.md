@@ -9,11 +9,12 @@ In this repository lies the frontend: components for a homepage, navigation bar,
 ## Demo
 
 Desktop view
-![Screen_Recording_2022-03-29_at_9_25_42_PM_AdobeCreativeCloudExpress](https://user-images.githubusercontent.com/92760530/160753338-3669faea-4cbb-46d5-9788-a2bebcf7e832.gif)
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/92760530/160754343-1d12b24c-2cf4-4456-b3ee-98c918666913.gif)
 
 Mobile view
 
-![Screen_Recording_2022-03-29_at_9_33_29_PM_AdobeCreativeCloudExpress](https://user-images.githubusercontent.com/92760530/160753503-8cd682fc-8190-41e4-88e1-353c05a8d25f.gif)
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/92760530/160754487-0a8f7866-7924-4a46-835d-4769d3399d86.gif)
+
 
 
 

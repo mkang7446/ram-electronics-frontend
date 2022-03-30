@@ -34,7 +34,7 @@
   flex-direction: row-reverse;
 }
 
-@media screen and (max-width: 692px) {
+@media screen and (max-width: 650px) {
   #nav-first-line {
     display: flex;
     flex-direction: row;
@@ -57,7 +57,7 @@
   font-weight: 500;
 }
 
-@media screen and (max-width: 692px) {
+@media screen and (max-width: 650px) {
   .nav-categories {
     display: none;
   }
@@ -98,7 +98,7 @@
   transition: 0.4s ease;
 }
 
-@media screen and (min-width: 692px) {
+@media screen and (min-width: 650px) {
   #modal-open-button {
     display: none;
   }
@@ -119,7 +119,7 @@
   border: 1px solid black;
 }
 
-@media screen and (min-width: 692px) {
+@media screen and (min-width: 650px) {
   #modal {
     display: none;
   }
@@ -180,7 +180,7 @@
   text-decoration: none;
 }
 
-@media screen and (max-width: 692px) {
+@media screen and (max-width: 650px) {
   #logo-name {
     margin-top: 10px;
     color: black;
