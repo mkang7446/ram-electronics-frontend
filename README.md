@@ -6,14 +6,14 @@ In this  team project by Annie Courney, Mason Kang, and Jake Steele, we challeng
 
 In this repository lies the frontend: components for a homepage, navigation bar, shopping cart, category section, item detail page, and the app as a whole. 
 
-## Screenshots
+## Demo
 
 Desktop view
-<img width="1307" alt="Screen Shot 2022-03-25 at 10 58 03 AM" src="https://user-images.githubusercontent.com/97859358/160176496-f97febf4-38f1-4388-9856-5e40c176f381.png">
+![Screen_Recording_2022-03-29_at_9_25_42_PM_AdobeCreativeCloudExpress](https://user-images.githubusercontent.com/92760530/160753338-3669faea-4cbb-46d5-9788-a2bebcf7e832.gif)
 
 Mobile view
 
-![Screen Shot 2022-03-25 at 10 59 20 AM](https://user-images.githubusercontent.com/97859358/160176637-f5986f1c-1cce-42c1-9a53-54c3a5b3203e.png)
+![Screen_Recording_2022-03-29_at_9_33_29_PM_AdobeCreativeCloudExpress](https://user-images.githubusercontent.com/92760530/160753503-8cd682fc-8190-41e4-88e1-353c05a8d25f.gif)
 
 
 

@@ -38,9 +38,7 @@ const Nav = () => {
         </div>
         <div id='logo-name'>
           <Link id='logo-name-link' to='/'>
-            <div id="logo-wrapper">
-              <img src="/RAM_fromLEFT.svg" alt="RAM logo of ram" />
-            </div>
+            <div id='logo-wrapper'></div>
             <h1 id='logo-name-h1'>RAM electronics</h1>
           </Link>
         </div>
@@ -72,6 +70,7 @@ const Nav = () => {
             </Link>
           </div>
         </div>
+        <div className='border'></div>
       </nav>
     </div>
   );

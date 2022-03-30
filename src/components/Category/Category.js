@@ -1,16 +1,16 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import items from "../Details/items.json";
+import React from 'react';
+import { useState, useEffect } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import items from '../Details/items.json';
 
-import "./Category.css";
+import './Category.css';
 
 function Category(props) {
   const { category } = useParams();
   const [allItems, setAllItems] = useState([]);
   const [specificItems, setSpecificItems] = useState([]);
 
-  const url = "https://thawing-mountain-85716.herokuapp.com/api/items";
+  const url = 'https://thawing-mountain-85716.herokuapp.com/api/items';
 
   useEffect(() => {
     const specificItemList = [];
@@ -27,17 +27,21 @@ function Category(props) {
         setAllItems(data);
         setSpecificItems(specificItemList);
       })
-      .catch((err) => console.log("oops error"));
+      .catch((err) => console.log('oops error'));
   }, [category]);
 
   return (
-    <main className="main-item-card-container">
+    <main className='main-item-card-container'>
       {specificItems.map((item) => (
-        <Link to={`/${category}/${item["_id"]}`} key={item["_id"]}>
-          <div className="card">
-            <div className="card-image">
+        <Link
+          className='category-link'
+          to={`/${category}/${item['_id']}`}
+          key={item['_id']}
+        >
+          <div className='card'>
+            <div className='card-image'>
               <img src={item.image} alt={item.name} />
-              <div className="card-title">
+              <div className='card-title'>
                 <h3>{item.name}</h3>
               </div>
             </div>
