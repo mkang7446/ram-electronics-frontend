@@ -2,20 +2,18 @@
 
 ## Project Description
 
-In this  team project by Annie Courney, Mason Kang, and Jake Steele, we challenged ourselves to create an online webstore. It sells electronic products and has various ways to organize the navigate through the products to put them into your cart.
+> In this  team project by Annie Courney, Mason Kang, and Jake Steele, we challenged ourselves to create an online webstore. It sells electronic products and has various ways to organize the navigate through the products to put them into your cart.
 
 In this repository lies the frontend: components for a homepage, navigation bar, shopping cart, category section, item detail page, and the app as a whole. 
 
 ## Demo
 
 Desktop view
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/92760530/160754343-1d12b24c-2cf4-4456-b3ee-98c918666913.gif)
+> ![ezgif com-gif-maker](https://user-images.githubusercontent.com/92760530/160754343-1d12b24c-2cf4-4456-b3ee-98c918666913.gif)
 
 Mobile view
 
-![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/92760530/160754487-0a8f7866-7924-4a46-835d-4769d3399d86.gif)
-
-
+> ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/92760530/160754487-0a8f7866-7924-4a46-835d-4769d3399d86.gif)
 
 
 ## Tech Used
