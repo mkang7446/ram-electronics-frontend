@@ -2,7 +2,7 @@ import React from 'react';
 // import { useState } from "react";
 import { Link } from 'react-router-dom';
 import './Home.css';
-import logo from '/Users/myungsoo.kang/sei/projects/ram_electronics/ram-electronics-frontend/src/components/Home/hugo-agut-tugal-6cdIdu8KkLg-unsplash.png';
+import logo from './homepage-img.png';
 
 function Home(props) {
   return (
